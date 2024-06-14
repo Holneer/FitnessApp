@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness App - Вправи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Дані</a></li>
+                <li><a href="exercise.html">Вправи</a></li>
+                <li><a href="diet.html">Дієта</a></li>
+                <li><a href="about.html">Про нас</a></li>
+            </ul>
+        </nav>
+        
+        <section id="section3">
+            <h2>Вправи</h2>
+            <form id="user-data-form" action="#">
+                <label for="user">Виберіть користувача:</label>
+                <select id="user" name="user" required>
+                    <!-- Options will be dynamically populated from saved data -->
+                </select>
+
+                <label for="goal">Мета:</label>
+                <select id="goal" name="goal" required>
+                    <option value="lose-weight">Схуднення</option>
+                    <option value="gain-weight">Набір маси</option>
+                </select>
+
+                <button type="submit">Показати план вправ</button>
+            </form>
+            <div id="exercise-plan"></div>
+        </section>
+    </div>
+
+    <script src="exercise.js"></script>
+</body>
+</html>

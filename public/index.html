@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Дані</a></li>
+                <li><a href="exercise.html">Вправи</a></li>
+                <li><a href="diet.html">Дієта</a></li>
+                <li><a href="about.html">Про нас</a></li>
+            </ul>
+        </nav>
+        <section id="section1">
+            <h2>Введення даних</h2>
+            <div class="user-load-section">
+                <label for="select-user">Виберіть користувача:</label>
+                <select id="select-user">
+                    <option value="">Виберіть користувача</option>
+                    <!-- Options will be populated dynamically -->
+                </select>
+                <button id="load-user">Завантажити дані користувача</button>
+                <button id="delete-user">Видалити користувача</button> <!-- Added delete button -->
+            </div>
+            
+            <form id="data-form" action="/api/userData/save" method="post">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="height">Зріст (см):</label>
+                <input type="number" id="height" name="height" required>
+                
+                <label for="weight">Вага (кг):</label>
+                <input type="number" id="weight" name="weight" required>
+                
+                <label for="age">Вік:</label>
+                <input type="number" id="age" name="age" required>
+                
+                <label for="gender">Стать:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Чоловік</option>
+                    <option value="female">Жінка</option>
+                </select>
+                
+                <button type="submit">Розрахувати ІМТ</button>
+            </form>
+            <div id="bmi-result"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

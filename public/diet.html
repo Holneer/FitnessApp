@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness App - Дієта</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Дані</a></li>
+                <li><a href="exercise.html">Вправи</a></li>
+                <li><a href="diet.html">Дієта</a></li>
+                <li><a href="about.html">Про нас</a></li>
+            </ul>
+        </nav>
+        
+        <div id="calorie-info" style="display: none;">
+            <h2>Цільове споживання калорій</h2>
+            <p>Відповідно до вашої ваги та мети, ваша цільова норма калорій становить <span id="calorie-result"></span> калорій.</p>
+        </div>
+    
+        <section id="section4">
+            <h2>Диета</h2>
+            <form id="user-data-form">
+                <label for="user">Виберіть користувача:</label>
+                <select id="user" name="user" required>
+                    <!-- Options will be dynamically populated from saved data -->
+                </select>
+
+                <label for="goal">Мета:</label>
+                <select id="goal" name="goal" required>
+                    <option value="lose-weight">Схуднення</option>
+                    <option value="gain-weight">Набір маси</option>
+                </select>
+
+                <button type="submit">Показати дієтичний план</button>
+            </form>
+            <div id="diet-plan"></div>
+        </section>
+    </div>
+
+    <script src="diet.js"></script>
+</body>
+</html>

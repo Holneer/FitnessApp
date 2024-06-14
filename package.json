@@ -1,0 +1,13 @@
+{
+    "name": "my-fitness-app",
+    "version": "1.0.0",
+    "description": "Fitness app with BMI calculator, exercise and diet plans",
+    "main": "server/app.js",
+    "scripts": {
+        "start": "node server/app.js"
+    },
+    "dependencies": {
+        "express": "^4.19.2",
+        "mongoose": "^5.13.22"
+    }
+}
